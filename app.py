@@ -69,17 +69,17 @@ with col1:
         st.markdown('<div class="card"><h3>1. 👤 Set up profile</h3><p class="small">Skills, rate, '
                      'experience and portfolio.</p></div>', unsafe_allow_html=True)
         if st.button("Edit profile", use_container_width=True):
-            st.switch_page("pages/1_👤_My_Profile.py")
+            st.switch_page("pages/1_My_Profile.py")
     with y:
         st.markdown('<div class="card"><h3>2. 📄 Paste a job</h3><p class="small">Paste or upload a job '
                      'description to analyze.</p></div>', unsafe_allow_html=True)
         if st.button("Analyze a job", use_container_width=True):
-            st.switch_page("pages/2_📄_Analyze_Job.py")
+            st.switch_page("pages/2_Analyze_Job.py")
     with z:
         st.markdown('<div class="card"><h3>3. ✍️ Get a proposal</h3><p class="small">Generate a tailored '
                      'draft from the match.</p></div>', unsafe_allow_html=True)
         if st.button("Go to proposals", use_container_width=True):
-            st.switch_page("pages/4_✍️_Proposal_Generator.py")
+            st.switch_page("pages/4_Proposal_Generator.py")
 
     st.subheader("🕓 Recently analyzed")
     if not history:
