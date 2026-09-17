@@ -14,7 +14,7 @@ VALID_PASSWORD = "pass1234"
 # --- NFR config: security thresholds ------------------------------------
 MAX_LOGIN_ATTEMPTS = 3          # failed attempts allowed before lockout
 LOCKOUT_SECONDS = 30            # how long a lockout lasts
-SESSION_TIMEOUT_MINUTES = 15    # auto-logout after this much inactivity
+SESSION_TIMEOUT_MINUTES = 5    # auto-logout after this much inactivity
 
 # --- NFR: Observability — audit logging ---------------------------------
 # Every auth event (success, failure, lockout, timeout) is logged with a
