@@ -135,7 +135,7 @@ def _shared_css():
         }
         .navbar-brand {display:flex; align-items:center; gap:10px;}
         .navbar-brand img {width:32px; height:32px; border-radius:8px;}
-        .navbar-brand span {font-size:18px; font-weight:800; color:#FFFFFF;}
+        .navbar-brand span {font-size:18px; font-weight:800; color:#4682B4;}
 
         .hero {
             padding:46px 40px; border-radius:20px; margin:6px 0 34px 0;
