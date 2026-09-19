@@ -38,16 +38,16 @@ st.sidebar.divider()
 st.sidebar.success("Prototype Mode")
 st.sidebar.caption("Synthetic profile data • no jobs are submitted anywhere")
 
-#st.markdown(f"""
-#<div class="hero">
-#<img src="data:image/png;base64,{logo_b64}">
-#<div>
-#<h1>Know your fit before you apply</h1>
-#<p>Paste any job description. Get a transparent match score, see exactly what skills you're missing,
-#get the right portfolio piece surfaced, and draft a tailored proposal — all in one pass.</p>
-#</div>
-#</div>
-#""", unsafe_allow_html=True)
+st.markdown(f"""
+<div class="hero">
+<img src="data:image/png;base64,{logo_b64}">
+<div>
+<h1>Know your fit before you apply</h1>
+<p>Paste any job description. Get a transparent match score, see exactly what skills you're missing,
+get the right portfolio piece surfaced, and draft a tailored proposal — all in one pass.</p>
+</div>
+</div>
+""", unsafe_allow_html=True)
 
 profile = st.session_state.profile
 history = st.session_state.job_history
