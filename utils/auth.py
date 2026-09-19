@@ -293,8 +293,8 @@ def _render_login_form():
         _render_countdown(int(_lockout_until - now))
 
     with st.form("login_form", clear_on_submit=False):
-        username = st.text_input("Username", placeholder="example@123")
-        password = st.text_input("Password", type="password", placeholder="••••••••")
+        username = st.text_input("Username", placeholder="Enter Your Username")
+        password = st.text_input("Password", type="password", placeholder="Enter Your Password")
         submitted = st.form_submit_button("Log in", use_container_width=True)
 
     if submitted:
