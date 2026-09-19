@@ -11,7 +11,41 @@ st.set_page_config(page_title="Freelance Career Copilot", page_icon="assets/favi
                     initial_sidebar_state="expanded")
 apply_branding()
 init_state()
-logout_button()
+#logout_button()
+# ---------- NAVBAR ----------
+nav_logo, nav_title, nav_home, nav_profile, nav_analyze, nav_apps, nav_logout = st.columns(
+    [0.4, 2.5, 0.8, 0.9, 1.1, 1.1, 0.9]
+)
+
+with nav_logo:
+    st.image("assets/logo.png", width=38)
+
+with nav_title:
+    st.markdown("### Freelance Career Copilot")
+
+with nav_home:
+    if st.button("Home", use_container_width=True):
+        st.switch_page("app.py")
+
+with nav_profile:
+    if st.button("Profile", use_container_width=True):
+        st.switch_page("pages/1_👤_My_Profile.py")
+
+with nav_analyze:
+    if st.button("Analyze", use_container_width=True):
+        st.switch_page("pages/2_📄_Analyze_Job.py")
+
+with nav_apps:
+    if st.button("Applications", use_container_width=True):
+        st.switch_page("pages/5_📋_Applications.py")
+
+with nav_logout:
+    if st.button("Logout", use_container_width=True):
+        st.session_state.authenticated = False
+        st.session_state.auth_view = "home"
+        st.rerun()
+
+st.divider()
 
 logo_b64 = base64.b64encode(Path("assets/logo.png").read_bytes()).decode()
 
