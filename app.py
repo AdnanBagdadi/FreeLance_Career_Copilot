@@ -38,7 +38,7 @@ st.sidebar.divider()
 st.sidebar.success("Prototype Mode")
 st.sidebar.caption("Synthetic profile data • no jobs are submitted anywhere")
 
-#st.markdown(f"""
+st.markdown(f"""
 <div class="hero">
 <img src="data:image/png;base64,{logo_b64}">
 <div>
