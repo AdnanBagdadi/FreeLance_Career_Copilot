@@ -46,7 +46,7 @@ st.sidebar.caption("Synthetic profile data • no jobs are submitted anywhere")
 #<p>Paste any job description. Get a transparent match score, see exactly what skills you're missing,
 #get the right portfolio piece surfaced, and draft a tailored proposal — all in one pass.</p>
 #</div>
-</div>
+#</div>
 #""", unsafe_allow_html=True)
 
 profile = st.session_state.profile
