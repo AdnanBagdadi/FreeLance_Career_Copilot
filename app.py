@@ -45,7 +45,6 @@ with nav_logout:
         st.session_state.auth_view = "home"
         st.rerun()
 
-st.divider()
 
 logo_b64 = base64.b64encode(Path("assets/logo.png").read_bytes()).decode()
 
