@@ -42,9 +42,9 @@ st.sidebar.caption("Synthetic profile data • no jobs are submitted anywhere")
 <div class="hero">
 <img src="data:image/png;base64,{logo_b64}">
 <div>
-#<h1>Know your fit before you apply</h1>
-#<p>Paste any job description. Get a transparent match score, see exactly what skills you're missing,
-#get the right portfolio piece surfaced, and draft a tailored proposal — all in one pass.</p>
+<h1>Know your fit before you apply</h1>
+<p>Paste any job description. Get a transparent match score, see exactly what skills you're missing,
+get the right portfolio piece surfaced, and draft a tailored proposal — all in one pass.</p>
 </div>
 </div>
 """, unsafe_allow_html=True)
