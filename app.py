@@ -11,45 +11,7 @@ st.set_page_config(page_title="Freelance Career Copilot", page_icon="assets/favi
                     initial_sidebar_state="expanded")
 apply_branding()
 init_state()
-#logout_button()
-# ---------- NAVBAR ----------
-nav_logo, nav_title, nav_home, nav_profile, nav_analyze, nav_apps, nav_logout = st.columns(
-    [0.5, 3.2, 1, 1, 1.2, 1.4, 1]
-)
-
-with nav_logo:
-    st.image("assets/logo.png", width=35)
-
-with nav_title:
-    st.markdown(
-        "<h3 style='margin:0; padding-top:5px;'>Freelance Career Copilot</h3>",
-        unsafe_allow_html=True
-    )
-
-with nav_home:
-    if st.button("Home", key="nav_home", use_container_width=True):
-        st.switch_page("app.py")
-
-with nav_profile:
-    if st.button("Profile", key="nav_profile", use_container_width=True):
-        st.switch_page("pages/1_👤_My_Profile.py")
-
-with nav_analyze:
-    if st.button("Analyze", key="nav_analyze", use_container_width=True):
-        st.switch_page("pages/2_📄_Analyze_Job.py")
-
-with nav_apps:
-    if st.button("Applications", key="nav_apps", use_container_width=True):
-        st.switch_page("pages/5_📋_Applications.py")
-
-with nav_logout:
-    if st.button("Logout", key="nav_logout", use_container_width=True):
-        st.session_state.authenticated = False
-        st.session_state.auth_view = "home"
-        st.rerun()
-
-st.divider()
-
+logout_button()
 
 logo_b64 = base64.b64encode(Path("assets/logo.png").read_bytes()).decode()
 
@@ -76,16 +38,16 @@ st.sidebar.divider()
 st.sidebar.success("Prototype Mode")
 st.sidebar.caption("Synthetic profile data • no jobs are submitted anywhere")
 
-st.markdown(f"""
-<div class="hero">
-<img src="data:image/png;base64,{logo_b64}">
-<div>
-<h1>Know your fit before you apply</h1>
-<p>Paste any job description. Get a transparent match score, see exactly what skills you're missing,
-get the right portfolio piece surfaced, and draft a tailored proposal — all in one pass.</p>
+#st.markdown(f"""
+#<div class="hero">
+#<img src="data:image/png;base64,{logo_b64}">
+#<div>
+#<h1>Know your fit before you apply</h1>
+#<p>Paste any job description. Get a transparent match score, see exactly what skills you're missing,
+#get the right portfolio piece surfaced, and draft a tailored proposal — all in one pass.</p>
+#</div>
 </div>
-</div>
-""", unsafe_allow_html=True)
+#""", unsafe_allow_html=True)
 
 profile = st.session_state.profile
 history = st.session_state.job_history
