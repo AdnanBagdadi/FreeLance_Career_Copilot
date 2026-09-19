@@ -66,7 +66,7 @@ def _render_countdown(remaining_seconds):
         f"""
         <div id="lockout-box" style="
             font-family:Arial, Helvetica, sans-serif; font-size:14px;
-            color:#92400e; background:#fef3c7; padding:12px 16px;
+            color:#000000; background:#fef3c7; padding:12px 16px;
             border-radius:8px; border:1px solid #fde68a;">
             Too many failed attempts. Try again in <b><span id="secs">{remaining_seconds}</span>s</b>.
         </div>
