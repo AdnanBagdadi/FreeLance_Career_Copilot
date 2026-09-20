@@ -1,13 +1,12 @@
 import streamlit as st
 
 DEFAULT_PROFILE = {
-    "name": "Muaaz Shaikh",
-    "title": "MSc Data Science | Python & Machine Learning",
-    "bio": "Data Science postgraduate focused on machine learning, analytics, Python and AI-powered applications.",
-    "skills": ["Python", "Machine Learning", "Pandas", "Scikit-learn", "SQL",
-               "Power BI", "Streamlit", "NLP", "Data Visualization"],
-    "experience": "Intermediate",
-    "rate": 30,
+    "name": "",
+    "title": "",
+    "bio": "",
+    "skills": "",
+    "experience": "",
+    "rate": ,
 }
 
 DEFAULT_PORTFOLIO = [
