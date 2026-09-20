@@ -26,10 +26,29 @@ st.markdown("""
 .sidebar-brand {display:flex; align-items:center; gap:10px; margin-bottom:2px;}
 .sidebar-brand img {width:34px; height:34px; border-radius:9px;}
 .sidebar-brand span {font-size:19px; font-weight:700; color:#0f172a;}
-.card {padding:18px; border:1px solid #e5e7eb; border-radius:14px; background:white; min-height:130px;}
+.card {
+    padding:18px;
+    border:1px solid rgba(128, 128, 128, 0.25);
+    border-radius:14px;
+    background:var(--secondary-background-color);
+    color:var(--text-color);
+    min-height:130px;
+}
+
+.card h3 {
+    color:var(--text-color);
+}
+
+.card p {
+    color:var(--text-color);
+}
 .job {padding:18px; border:1px solid #e5e7eb; border-radius:14px; background:white; margin-bottom:12px;}
 .badge {display:inline-block; padding:5px 10px; border-radius:999px; background:#eef2ff; color:#4338ca; font-weight:700; font-size:12px;}
-.small {color:#6b7280; font-size:13px;}
+.small {
+    color:var(--text-color);
+    opacity:0.7;
+    font-size:13px;
+}
 </style>
 """, unsafe_allow_html=True)
 
