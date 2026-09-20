@@ -6,7 +6,6 @@ DEFAULT_PROFILE = {
     "bio": "",
     "skills": "",
     "experience": "",
-    "rate": ,
 }
 
 DEFAULT_PORTFOLIO = [
