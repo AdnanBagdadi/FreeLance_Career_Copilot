@@ -15,7 +15,7 @@ VALID_PASSWORD = "pass1234"
 # --- NFR config: security thresholds ------------------------------------
 MAX_LOGIN_ATTEMPTS = 3          # failed attempts allowed before lockout
 LOCKOUT_SECONDS = 30            # how long a lockout lasts
-SESSION_TIMEOUT_MINUTES = 2    # auto-logout after this much inactivity
+SESSION_TIMEOUT_MINUTES = 10    # auto-logout after this much inactivity
 
 # --- Lockout state lives at MODULE level, not st.session_state. ---------
 # st.session_state is tied to one browser session and is wiped on a page
