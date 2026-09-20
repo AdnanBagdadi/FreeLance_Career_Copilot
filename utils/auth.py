@@ -96,10 +96,10 @@ FEATURES = [
     ("🎯", "Transparent Match Scoring",
      "Paste any job description and get an explainable match percentage — not a black-box "
      "number — scored against your actual skills, rate and experience level."),
-    ("🧠", "Recurring Skill-Gap Analytics",
+    ("🧠", "Recurring Skill-Gap Analysis",
      "Every missing skill is tallied across every job you analyze, so you always know exactly "
      "what's worth learning next."),
-    ("📁", "Portfolio Piece Surfacing",
+    ("📁", "Portfolio Surfacing",
      "The most relevant sample from your portfolio is automatically recommended for each job, "
      "so you never guess what to showcase."),
     ("✍️", "Tailored Proposal Drafts",
