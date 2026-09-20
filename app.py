@@ -42,7 +42,18 @@ st.markdown("""
 .card p {
     color:var(--text-color);
 }
-.job {padding:18px; border:1px solid #e5e7eb; border-radius:14px; background:white; margin-bottom:12px;}
+.job {
+    padding:18px;
+    border:1px solid rgba(128,128,128,0.25);
+    border-radius:14px;
+    background:var(--secondary-background-color);
+    color:var(--text-color);
+    margin-bottom:12px;
+}
+
+.job h4 {
+    color:var(--text-color);
+}
 .badge {display:inline-block; padding:5px 10px; border-radius:999px; background:#eef2ff; color:#4338ca; font-weight:700; font-size:12px;}
 .small {
     color:var(--text-color);
