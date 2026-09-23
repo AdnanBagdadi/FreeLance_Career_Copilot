@@ -1,16 +1,20 @@
+def _normalize_skill(skill):
+    return skill.strip().lower()
+
+
 def matched_skills(job_skills, profile):
-    mine = {s.lower() for s in profile["skills"]}
-    return [s for s in job_skills if s.lower() in mine]
+    mine = {_normalize_skill(s) for s in profile["skills"]}
+    return [s for s in job_skills if _normalize_skill(s) in mine]
 
 
 def missing_skills(job_skills, profile):
-    mine = {s.lower() for s in profile["skills"]}
-    return [s for s in job_skills if s.lower() not in mine]
+    mine = {_normalize_skill(s) for s in profile["skills"]}
+    return [s for s in job_skills if _normalize_skill(s) not in mine]
 
 
 def calculate_match(job_skills, budget_range, exp_level, profile):
-    mine = {s.lower() for s in profile["skills"]}
-    required = {s.lower() for s in job_skills}
+    mine = {_normalize_skill(s) for s in profile["skills"]}
+    required = {_normalize_skill(s) for s in job_skills}
     overlap = len(required & mine) / max(len(required), 1) if required else 0.5
 
     if budget_range:
