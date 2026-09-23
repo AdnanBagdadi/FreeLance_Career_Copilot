@@ -5,9 +5,16 @@ from utils.skills_db import SKILLS_DB, EXPERIENCE_KEYWORDS
 def extract_skills(text: str):
     text_l = text.lower()
     found = []
+
     for skill in SKILLS_DB:
-        if skill.lower() in text_l:
+        skill_l = skill.strip().lower()
+
+        # Match the complete skill rather than arbitrary substrings.
+        pattern = r"(?<!\w)" + re.escape(skill_l) + r"(?!\w)"
+
+        if re.search(pattern, text_l):
             found.append(skill)
+
     return found
 
 
