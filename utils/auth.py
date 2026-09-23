@@ -163,9 +163,6 @@ def _shared_css():
 
         .login-title {font-size:26px; font-weight:800; color:#0f172a; margin:14px 0 4px 0;}
         .login-sub {font-size:13.5px; color:#6b7280; margin:0 0 22px 0;}
-        [data-testid="stTextInput"] label {
-    color: var(--text-color) !important;
-}
         .login-hint {
             margin-top:18px; padding:10px 14px; border-radius:10px;
             background:#eef2ff; color:#4338ca; font-size:12.5px;
