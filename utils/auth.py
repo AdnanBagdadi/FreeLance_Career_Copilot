@@ -66,7 +66,7 @@ def _render_countdown(remaining_seconds):
         f"""
         <div id="lockout-box" style="
             font-family:Arial, Helvetica, sans-serif; font-size:14px;
-            color:#FFFFFF; background:#000000; padding:12px 16px;
+            color:var(--text-color); background:#000000; padding:12px 16px;
             border-radius:8px; border:1px solid #000000;">
             Too many failed attempts. Try again in <b><span id="secs">{remaining_seconds}</span>s</b>.
         </div>
@@ -135,14 +135,14 @@ def _shared_css():
         }
         .navbar-brand {display:flex; align-items:center; gap:10px;}
         .navbar-brand img {width:32px; height:32px; border-radius:8px;}
-        .navbar-brand span {font-size:18px; font-weight:800; color:#4682B4;}
+        .navbar-brand span {font-size:18px; font-weight:800; color:var(--text-color);}
 
         .hero {
             padding:46px 40px; border-radius:20px; margin:6px 0 34px 0;
             background:linear-gradient(135deg,#0f172a,#1e293b); color:white;
         }
         .hero h1 {font-size:38px; margin:0 0 12px 0;}
-        .hero p {font-size:16.5px; color:#cbd5e1; max-width:680px; line-height:1.55;}
+        .hero p {font-size:16.5px; color:var(--text-color); max-width:680px; line-height:1.55;}
 
         .feat-grid {
             display:grid; grid-template-columns:repeat(3, 1fr);
@@ -153,19 +153,19 @@ def _shared_css():
             background:white; box-sizing:border-box;
         }
         .feat-card .emoji {font-size:26px;}
-        .feat-card h4 {margin:10px 0 6px 0; font-size:16px; color:#0f172a;}
-        .feat-card p {margin:0; font-size:12.8px; color:#6b7280; line-height:1.5;}
+        .feat-card h4 {margin:10px 0 6px 0; font-size:16px; color:var(--text-color);}
+        .feat-card p {margin:0; font-size:12.8px; color:var(--text-color); line-height:1.5;}
 
         .proto-banner {
             margin-top:36px; padding:14px 18px; border-radius:12px;
-            background:#eef2ff; color:#4338ca; font-size:13px; text-align:center;
+            background:#eef2ff; color:var(--text-color); font-size:13px; text-align:center;
         }
 
-        .login-title {font-size:26px; font-weight:800; color:#0f172a; margin:14px 0 4px 0;}
-        .login-sub {font-size:13.5px; color:#6b7280; margin:0 0 22px 0;}
+        .login-title {font-size:26px; font-weight:800; color:var(--text-color);; margin:14px 0 4px 0;}
+        .login-sub {font-size:13.5px; color:var(--text-color); margin:0 0 22px 0;}
         .login-hint {
             margin-top:18px; padding:10px 14px; border-radius:10px;
-            background:#eef2ff; color:#4338ca; font-size:12.5px;
+            background:#eef2ff; color:var(--text-color); font-size:12.5px;
         }
         div[data-testid="stForm"] {border:none; padding:0;}
         </style>
