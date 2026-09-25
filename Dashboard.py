@@ -16,7 +16,10 @@ logout_button()
 st.markdown("""
 <style>
 #MainMenu, footer {visibility:hidden;}
-.block-container {padding-top:1.5rem; max-width:1300px;}
+.block-container {
+    padding-top:4rem !important;
+    max-width:1300px;
+}
 .hero {padding:28px 30px; border-radius:18px; background:linear-gradient(135deg,#0f172a,#1e293b); color:white; margin-bottom:20px; display:flex; align-items:center; gap:22px;}
 .hero img {width:64px; height:64px; border-radius:16px; flex-shrink:0;}
 .hero h1 {font-size:38px; margin:0 0 8px 0;}
@@ -81,26 +84,14 @@ history = st.session_state.job_history
 apps = st.session_state.applications
 
 c1, c2, c3, c4 = st.columns(4)
-
 with c1:
-    st.markdown("**Jobs Analyzed**")
-    st.markdown(f"# {len(history)}")
+    st.metric("Jobs Analyzed", len(history))
     if st.button("View list", key="toggle_jobs_list"):
         st.session_state.show_jobs_list = not st.session_state.get("show_jobs_list", False)
-
-with c2:
-    st.markdown("**Applications Tracked**")
-    st.markdown(f"# {len(apps)}")
-
-with c3:
-    st.markdown("**Portfolio Pieces**")
-    st.markdown(f"# {len(st.session_state.portfolio)}")
-
+c2.metric("Applications Tracked", len(apps))
+c3.metric("Portfolio Pieces", len(st.session_state.portfolio))
 avg = round(sum(h["score"] for h in history) / len(history)) if history else 0
-
-with c4:
-    st.markdown("**Avg. Match Score**")
-    st.markdown(f"# {avg}%")
+c4.metric("Avg. Match Score", f"{avg}%")
 
 if st.session_state.get("show_jobs_list", False):
     st.subheader("📋 All jobs analyzed")
