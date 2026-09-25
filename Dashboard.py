@@ -68,14 +68,6 @@ div[data-testid="stVerticalBlock"]:has(> div[data-testid="stElementContainer"] d
     opacity:0.7;
     font-size:13px;
 }
-/* Force metric labels to follow active theme */
-div[data-testid="stMetric"] label,
-div[data-testid="stMetric"] label p,
-div[data-testid="stMetric"] [data-testid="stMetricLabel"],
-div[data-testid="stMetric"] [data-testid="stMetricLabel"] p {
-    color: var(--text-color) !important;
-    opacity: 1 !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
@@ -89,14 +81,26 @@ history = st.session_state.job_history
 apps = st.session_state.applications
 
 c1, c2, c3, c4 = st.columns(4)
+
 with c1:
-    st.metric("Jobs Analyzed", len(history))
+    st.markdown("**Jobs Analyzed**")
+    st.markdown(f"# {len(history)}")
     if st.button("View list", key="toggle_jobs_list"):
         st.session_state.show_jobs_list = not st.session_state.get("show_jobs_list", False)
-c2.metric("Applications Tracked", len(apps))
-c3.metric("Portfolio Pieces", len(st.session_state.portfolio))
+
+with c2:
+    st.markdown("**Applications Tracked**")
+    st.markdown(f"# {len(apps)}")
+
+with c3:
+    st.markdown("**Portfolio Pieces**")
+    st.markdown(f"# {len(st.session_state.portfolio)}")
+
 avg = round(sum(h["score"] for h in history) / len(history)) if history else 0
-c4.metric("Avg. Match Score", f"{avg}%")
+
+with c4:
+    st.markdown("**Avg. Match Score**")
+    st.markdown(f"# {avg}%")
 
 if st.session_state.get("show_jobs_list", False):
     st.subheader("📋 All jobs analyzed")
