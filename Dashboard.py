@@ -68,6 +68,14 @@ div[data-testid="stVerticalBlock"]:has(> div[data-testid="stElementContainer"] d
     opacity:0.7;
     font-size:13px;
 }
+/* Metric labels */
+[data-testid="stMetricLabel"] {
+    color:var(--text-color) !important;
+}
+
+[data-testid="stMetricLabel"] p {
+    color:var(--text-color) !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
