@@ -41,7 +41,7 @@ if st.button("✏️ Edit Profile", use_container_width=True):
     st.switch_page("pages/1_My_Profile.py")
 
 st.divider()
-with st.expander("⚠️ Danger Zone"):
+with st.expander("⚠️ Deactivate Account"):
     st.write("Permanently delete your account and everything saved under it — profile, "
              "portfolio, job history, and applications. **This cannot be undone.**")
     confirm = st.checkbox("I understand this will permanently delete my account and all my data.")
