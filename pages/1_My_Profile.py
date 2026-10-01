@@ -12,9 +12,9 @@ init_state()
 load_into_session(st)
 logout_button()
 
-nav_back, nav_spacer = st.columns([1, 6])
+nav_back, nav_spacer = st.columns([1, 10])
 with nav_back:
-    if st.button("←", key="navbar_back", use_container_width=True):
+    if st.button("←", key="navbar_back"):
         st.switch_page("Dashboard.py")
 
 st.title("👤 My Profile")
