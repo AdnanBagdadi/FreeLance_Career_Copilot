@@ -14,7 +14,7 @@ logout_button()
 
 nav_back, nav_spacer = st.columns([1, 6])
 with nav_back:
-    if st.button("← Back", key="navbar_back", use_container_width=True):
+    if st.button("←", key="navbar_back", use_container_width=True):
         st.switch_page("Dashboard.py")
 st.divider()
 
