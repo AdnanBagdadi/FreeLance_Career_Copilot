@@ -14,7 +14,7 @@ nav_back, nav_spacer = st.columns([1, 10])
 with nav_back:
     if st.button("←", key="navbar_back"):
         st.switch_page("Dashboard.py")
-st.divider()
+
 
 st.title("👤 View Profile")
 st.caption("A read-only summary of your profile. Use Edit Profile below to make changes.")
