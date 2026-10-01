@@ -18,7 +18,6 @@ nav_back, nav_spacer = st.columns([1, 10])
 with nav_back:
     if st.button("←", key="navbar_back"):
         st.switch_page("Dashboard.py")
-st.divider()
 st.title("📄 Analyze a Job Description")
 st.caption("Paste the job post, or upload a file. Nothing is submitted anywhere — this only analyzes.")
 
