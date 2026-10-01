@@ -16,7 +16,6 @@ nav_back, nav_spacer = st.columns([1, 6])
 with nav_back:
     if st.button("←", key="navbar_back", use_container_width=True):
         st.switch_page("Dashboard.py")
-st.divider()
 
 st.title("👤 My Profile")
 st.caption("This is what your job description matches, missing skills and proposals are generated against.")
