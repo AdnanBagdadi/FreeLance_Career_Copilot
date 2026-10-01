@@ -16,7 +16,6 @@ nav_back, nav_spacer = st.columns([1, 10])
 with nav_back:
     if st.button("←", key="navbar_back"):
         st.switch_page("Dashboard.py")
-st.divider()
 
 st.title("📈 Insights")
 st.caption("Skill-gap patterns across every job you've analyzed — not just one application at a time.")
