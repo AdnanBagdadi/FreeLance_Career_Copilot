@@ -35,4 +35,4 @@ else:
                 st.rerun()
             with st.expander("View proposal sent"):
                 st.write(app["proposal"])
-            st.divider()
+            
